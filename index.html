@@ -19,20 +19,149 @@
                 text-align: center;
             }
 
-            
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background: 
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('e3c9d34f8d433a189d928c442dd74850.jpg') center/cover no-repeat;
+                color: white; /* make text readable */
+                align-items: center;
+                text-align: center;
+            }
+
+            p {
+                background-color: rgba(100, 149, 237, 0.8); /* semi-transparent cornflowerblue */
+                text-align: center;
+                padding: 10px;
+                border-radius: 10px;
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            img {
+                display: block;
+                margin: auto;
+                background-color: grey;
+                border-radius: 15px;
+                max-width: 300px;
+                margin-bottom: 40px;
+            }
+
+           <button class="menu-btn" onclick="openMenu()">Open Menu</button>
+/* ======== MENU BUTTON ======== */
+      .menu-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 1001;
+      }
+      .menu-btn:hover {
+        background-color: #0056b3;
+      }
+
+/* ======== SIDE MENU ======== */
+      .side-menu {
+        position: fixed;
+        top: 0;
+        left: -250px; /* Hidden by default */
+        width: 250px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        color: black;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        transition: 0.3s;
+        z-index: 1000;
+        padding-top: 60px;
+      }
+
+      .side-menu.open {
+        left: 0; /* Slide in */
+      }
+
+      .side-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .side-menu li {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .side-menu a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+      }
+
+      .side-menu a:hover {
+        color: #007bff;
+      }
+/* ======== DARK OVERLAY ======== */
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+
+      .overlay.show {
+        display: block;
+      }
         </style>
     </head>
     <body>
-        <h1>TOP 5 WAYS TO MAKE A BAJILLION DOLLARS EVENTUALLY IN YOUR LIFETIME</h1>
+        <button class="menu-btn" onclick="openMenu()">☰ Menu</button>
+
+        <div class="side-menu" id="sideMenu">
+        <ul>
+            <li><a href="myhouse.html">🏠 Home</a></li>
+            <li><a href="#">💡 About</a></li>
+            <li><a href="#">📞 Contact >:3</a></li>
+            <li><a href="#">📰 how to make money</a></li>
+        </ul>
+        </div>
+
+        <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+        <p>need job blud?</p>
+    <video controls width="600">
+        <source
+            src="
+           https://media.geeksforgeeks.org/wp-content/uploads/20231020155223/Full-Stack-Development-_-LIVE-Classes-_-GeeksforGeeks.mp4"
+            type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+        <h1>TOP 5 WAYS TO MAKE A BAJILLION MONIES EVENTUALLY IN YOUR LIFETIME</h1>
         <img src="Confused yoda.png" alt="confused yoda">
         
-        <h2>Have you ever needed money? Have ever collapsed in defeat at the face of high expenses? Have you ever wanted to retire before you even got a job? Well you, great reader, have come to the right place! In this completely valid blog of mine, YOU will learn how to make a BAJILLION DOLLARS eventually in your lifetime.</h2>
+        <img src="guy with money.jpeg" alt="guy with money">
+
+        <h2>Have you ever needed money? Have ever collapsed in defeat at the face of high expenses? Have you ever wanted to retire before you even got a job? Well you, great reader, have come to the right place! In this completely valid blog of mine, YOU will learn how to make a BAJILLION MONIES eventually in your lifetime.</h2>
 
         <h1>NUMERO UNO: go street performing (but strategically)</h1>
         <h3>Do you have a talent(play an instrument, are funny, can chug a bottle of water in 0.2 seconds, etc.)? Then street performing would suit you perfectly! But you can't just turn it into your daily 9:00 to 17.00, that would be miserable! You gotta do it strategically.</h3>
         <h2>STRATEGY 1 (yeah we got substeps now baby): Make it an EVENT</h2>
-        <h3>This way, your performance will stand out from the others, because it only happens once in a lifetime(or a year, month, however you want it). You could start by putting flyers about your performance everywhere you go, ask your friends to spread the word, post something on twitter, that kinda stuff. Your performance doesn't even have to be that crazy or dramatic or highly gifted/talented or life threatening. It just should to be something unique and would get people hyped, like "I WILL BREAKDANCE ON LEGOS" or "I WILL READ QUESTIONABLE FANFICTION OUT LOUD" or "I WILL DO A STANDUP COMEDY WHILE DRUNK" or "I WILL EAT A BUNCH OF FLAMING CHEETOS WHILE SINGING SWEET CAROLINE". It should take place where there's enough space for a lot of people(you never know), like a park center or a townsquare. Though remind yourself about the law while doing this, be careful, you don't wanna get yourself arrested do you? And also have respect for the people who live where you're performing, like doing a song concert at midnight wouldn't be very nice for the people trying to sleep. Now, during the performance, you should have some capability hyping people up. If your performance were to take some time(30+ minutes), you should have some way of keeping people entertained, like bringing in a volunteer every once in a while or a complete switchup of the concept in the middle of it(standup comedy while drunk to eating flaming cheetos while singing).</h3>
-        
+        <h3>This way, your performance will stand out from the others, because it only happens once in a lifetime(or a year, month, however you want it). You could start by putting flyers about your performance everywhere you go, ask your friends to spread the word, post something on twitter, that kinda stuff. Your performance doesn't even have to be that crazy or dramatic or highly gifted/talented or life threatening. It just should to be something unique and would get people hyped, like "I WILL BREAKDANCE ON LEGOS" or "I WILL READ QUESTIONABLE FANFICTION OUT LOUD" or "I WILL DO A STANDUP COMEDY WHILE DRUNK" or "I WILL EAT A BUNCH OF FLAMING HOT CHEETOS WHILE SINGING SWEET CAROLINE". It should take place where there's enough space for a lot of people(you never know), like a park center or a townsquare. Though remind yourself about the law while doing this, be careful, you don't wanna get yourself arrested do you? And also have respect for the people who live where you're performing, like doing a song concert at midnight wouldn't be very nice for the people trying to sleep. Now, during the performance, you should have some capability for hyping people up. If your performance were to take some time(30+ minutes), you should have some way of keeping people entertained, like bringing in a volunteer every once in a while or a complete switchup of the concept in the middle of it(standup comedy while drunk to eating flaming cheetos hot while singing). I forgot what else I was gonna write down about this so yeah, that's strategy 1.</h3>
+        <h2>STRATEGY 2(fear not, these ones are shorter): Celeb meet up</h2>
+        <h3>Is a celebrity(famous person) coming to your area? If so, then one thing you should know, is that PROFIT FOR STREET PERFORMING HAS GONE UP BY ALOT%! Find out where they're off to next, get over there and PERFORM LIKE YOUR LIFE DEPENDS ON IT. If you're lucky, you might get more money then you've ever gotten in your whole life! Pretty neat i'd say.</h3>
+        <h2>STRATEGY 3: go to a rich town bruh</h2>
+        <h3>I don't know what else to say, just go to a rich town and perform for a bit. Somebody oughtta give something good at some point.</h3>
+        <h2>STRATEGY FOUR: THE BEST WAY</h2>
+        <h3>Try out all of the strategies listed above.</h3>
         <p>this is a paragraph bla bla </p>
 
         <ul>
@@ -46,6 +175,18 @@
             <li>two</li>
             <li>three</li>
         </ol>
+
+        <script>
+            function openMenu() {
+                document.getElementById("sideMenu").classList.add("open");
+                document.getElementById("overlay").classList.add("show");
+            }
+
+            function closeMenu() {
+                document.getElementById("sideMenu").classList.remove("open");
+                document.getElementById("overlay").classList.remove("show");
+            }
+            </script>
 
     </body>
 </html>

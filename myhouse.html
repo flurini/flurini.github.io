@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Flurin's House Page</title>
+
+        <style>
+          
+/* ======== MENU BUTTON ======== */
+      .menu-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 1001;
+      }
+      .menu-btn:hover {
+        background-color: #0056b3;
+      }
+
+/* ======== SIDE MENU ======== */
+      .side-menu {
+        position: fixed;
+        top: 0;
+        left: -250px; /* Hidden by default */
+        width: 250px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        color: black;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        transition: 0.3s;
+        z-index: 1000;
+        padding-top: 60px;
+      }
+
+      .side-menu.open {
+        left: 0; /* Slide in */
+      }
+
+      .side-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .side-menu li {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .side-menu a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+      }
+
+      .side-menu a:hover {
+        color: #007bff;
+      }
+/* <======== DARK OVERLAY ======== */
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+
+      .overlay.show {
+        display: block;
+      }            
+        </style>
+    </head>
+    <body>
+         <button class="menu-btn" onclick="openMenu()">Open Menu</button>
+         <div class="side-menu" id="sideMenu">
+        <ul>
+            <li><a href="myhouse.html">🏠 Home</a></li>
+            <li><a href="#">💡 About</a></li>
+            <li><a href="#">📞 Contact >:3</a></li>
+            <li><a href="index.html">📰 how to make money</a></li>>
+        </ul>
+        </div>
+
+        <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+        <h1>HELLO</h1>
+        <script>
+            function openMenu() {
+                document.getElementById("sideMenu").classList.add("open");
+                document.getElementById("overlay").classList.add("show");
+            }
+
+            function closeMenu() {
+                document.getElementById("sideMenu").classList.remove("open");
+                document.getElementById("overlay").classList.remove("show");
+            }
+            </script>
+    </body>
+</html>
