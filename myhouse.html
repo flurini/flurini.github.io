@@ -11,7 +11,7 @@
             img{
                 display: block;
                 margin: auto;
-                background-color: grey;
+                background-color: rgb(255, 255, 255);
                 border-radius: 15px;
             }
 
@@ -23,8 +23,8 @@
                 margin: 0;
                 font-family: Arial, sans-serif;
                 background: 
-                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('e3c9d34f8d433a189d928c442dd74850.jpg') center/cover no-repeat;
+                linear-gradient(rgba(42, 50, 184, 0.6), rgba(0, 0, 0, 0.6)),
+                url('neatbg.jpg') center/cover no-repeat;
                 color: white; /* make text readable */
                 align-items: center;
                 text-align: center;
@@ -42,7 +42,7 @@
             img {
                 display: block;
                 margin: auto;
-                background-color: grey;
+                background-color: rgb(255, 255, 255);
                 border-radius: 15px;
                 max-width: 300px;
                 margin-bottom: 40px;
@@ -120,8 +120,35 @@
 
       .overlay.show {
         display: block;
-      }            
-        </style>
+      }     
+
+      .scroll-container{
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        background: #111;
+        color: #fff;
+        padding: 10px 0;
+        font-size: 1.2em;
+        font-family: sans-serif;
+      }
+
+      .scroll-text{
+        display: inline-block;
+        padding-left: 100%;
+        animation: scroll-left 15s linear infinite;
+      }
+
+      @keyframes scroll-left{
+        from{
+          transform: translateX(0)
+        }
+        to{
+          transform: translateX(-100%);
+        }
+      }
+
+      </style>
     </head>
     <body>
          <button class="menu-btn" onclick="openMenu()">Open Menu</button>
@@ -148,10 +175,18 @@
                 document.getElementById("overlay").classList.remove("show");
             }
             </script>
+
+            <p>need job blud?</p>
+   
+            <iframe width="420" height="315"
+              src="https://youtu.be/v3D-0pkhZ3s?si=zEOIDyiynWpCKN9X">
+            </iframe>
+
+            <div class="scroll-container">
+              <div class="scroll-text">
+                Created by: Flurin Malik Brunner
+              </div>
+            </div>
     </body>
 </html>
-        <p>need job blud?</p>
-   
-    <iframe width="420" height="315"
-src="https://youtu.be/v3D-0pkhZ3s?si=zEOIDyiynWpCKN9X">
-</iframe>
+        
