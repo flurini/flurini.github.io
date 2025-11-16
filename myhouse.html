@@ -147,6 +147,93 @@
           transform: translateX(-100%);
         }
       }
+      #funBtn {
+
+    background: #ffcc00;
+
+    border: none;
+
+    padding: 15px 25px;
+
+    font-size: 22px;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 0 #e6b800;
+
+    transition: 0.2s;
+
+  }
+
+  #funBtn:hover {
+
+    transform: scale(1.1);
+
+  }
+
+  /* Popup box */
+
+  #popupBox {
+
+    display: none;
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    width: 300px;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+    z-index: 999;
+
+  }
+
+  #popupBox p {
+
+    font-size: 20px;
+
+    color: #444;
+
+  }
+
+  #closeBtn {
+
+    margin-top: 15px;
+
+    background: #ff6666;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    font-size: 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 0 #cc5252;
+
+  }
+
+  #closeBtn:hover {
+
+    transform: scale(1.1);
+  }
+  
 
       </style>
     </head>
@@ -161,11 +248,20 @@
         </ul>
         </div>
 
+        <button id="funBtn">🎉 Show Me a Fun Fact!</button>
+        <div id="popupBox">
+        <p id="factText"></p>
+        <button id="closeBtn">OK!</button>
+        </div>
+
+
         <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+        <img src="nerdflurinnie.jpg">
 
         <h1>Hi I'm Flurin</h1>
         <h2>This is a neat little website i'm using to advertise myself and stuff.</h2>
-        <h3>I like to make things like drawings, films, music, games and other stuff(this website included).</h3>
+        <h3>I like to make things like drawings, films, music, games and other stuff(such as this website).</h3>
+        <p>I was born on 10.10.10</p>
         <script>
             function openMenu() {
                 document.getElementById("sideMenu").classList.add("open");
@@ -176,6 +272,50 @@
                 document.getElementById("sideMenu").classList.remove("open");
                 document.getElementById("overlay").classList.remove("show");
             }
+
+            const funFacts = [
+
+                "I once ate 4 scoops of ice cream in 1 minute! 🍦",
+
+                "My cat thinks it owns the entire house 😼",
+
+                "I can solve a 3x3 Rubik’s cube in 2 minutes!",
+
+                "I built my own robot using LEGO 🤖",
+
+                "I know how to whistle like a bird 🐦",
+
+                "I collected 200+ stickers! 🟡🟣🔵",
+
+                "I can draw superheroes with my eyes closed… kind of 😆"
+
+              ];
+
+              const funBtn = document.getElementById("funBtn");
+
+              const popup = document.getElementById("popupBox");
+
+              const factText = document.getElementById("factText");
+
+              const closeBtn = document.getElementById("closeBtn");
+
+              funBtn.onclick = function() {
+
+                const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+
+                factText.textContent = randomFact;
+
+                popup.style.display = "block";
+
+              }
+
+              closeBtn.onclick = function() {
+
+                popup.style.display = "none";
+
+              }
+
+
             </script>
 
             <p>look at this cool thing i made</p>
@@ -185,6 +325,6 @@
               </div>
             </div>
     </body>
+    <iframe src="https://scratch.mit.edu/projects/1113634645/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
     <iframe width="866" height="487" src="https://www.youtube.com/embed/RcTEIFLo1ZQ" title="meet the spy but everyones a butter toad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </html>
-        
